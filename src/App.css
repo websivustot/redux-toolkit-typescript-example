@@ -37,3 +37,21 @@
     transform: translateY(0px);
   }
 }
+
+ul {
+  list-style: none;
+}
+
+.todo {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+input:checked + span {
+  text-decoration: line-through;
+}
+
+.del {
+  cursor: pointer;
+}
