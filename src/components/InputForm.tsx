@@ -16,8 +16,11 @@ const InputForm: React.FC<InputFormProps> = ({
         value={text}
         type="text"
         onChange={(e) => handleInput(e.target.value)}
+        className="textbox"
       />
-      <button onClick={handleSubmit}>Add Todo</button>
+      <button onClick={handleSubmit} className="button">
+        Add Todo
+      </button>
     </label>
   );
 };

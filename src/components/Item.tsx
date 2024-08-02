@@ -14,6 +14,7 @@ const TodoItem: React.FC<TodoItemProps> = ({
   return (
     <li className="todo" key={todo.id}>
       <input
+        className="checkbox"
         type="checkbox"
         checked={todo.complited}
         onChange={() => toggleTodo(todo.id)}
