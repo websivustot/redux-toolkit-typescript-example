@@ -1,26 +1,23 @@
+import { useDispatch } from "react-redux";
 import { Todo } from "../components/types";
+import { removeTodo, toggleTodo } from "./todoSlice";
 
 interface TodoItemProps {
   todo: Todo;
-  toggleTodo: (id: string) => void;
-  deleteTodo: (id: string) => void;
 }
 
-const TodoItem: React.FC<TodoItemProps> = ({
-  todo,
-  toggleTodo,
-  deleteTodo,
-}) => {
+const TodoItem: React.FC<TodoItemProps> = ({ todo }) => {
+  const dispatch = useDispatch();
   return (
     <li className="todo" key={todo.id}>
       <input
         className="checkbox"
         type="checkbox"
         checked={todo.complited}
-        onChange={() => toggleTodo(todo.id)}
+        onChange={() => dispatch(toggleTodo(todo))}
       />
       <span>{todo.text}</span>
-      <span className="del" onClick={() => deleteTodo(todo.id)}>
+      <span className="del" onClick={() => dispatch(removeTodo(todo))}>
         &times;
       </span>
     </li>
