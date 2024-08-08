@@ -1,3 +1,9 @@
+# Todo list app on Redux Toolkit with typescript
+
+Last changes contain simple todo list on redux toolkit.
+
+This commit https://github.com/websivustot/redux-toolkit-typescript-example/tree/d47a33e8f5e540f8399a6a9df8f088a97600e372 contains vrevious version of same todo list with props.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
